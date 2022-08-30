@@ -4,9 +4,12 @@ import { RouterModule } from '@angular/router';
 import {
   NbButtonModule,
   NbCardModule,
+  NbFormFieldModule,
   NbIconModule,
   NbLayoutModule,
+  NbSelectModule,
   NbThemeModule,
+  NbUserModule,
 } from '@nebular/theme';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -25,7 +28,10 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     NbLayoutModule,
     NbButtonModule,
     NbCardModule,
+    NbUserModule,
     NbIconModule,
+    NbFormFieldModule,
+    NbSelectModule,
     NbEvaIconsModule,
     BrowserAnimationsModule,
     CarouselModule,

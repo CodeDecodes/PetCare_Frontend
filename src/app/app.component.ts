@@ -44,6 +44,7 @@ export class AppComponent {
     loop: true,
     autoplay: true,
     center: true,
+
     dots: true,
     responsive: {
       0: {
@@ -60,7 +61,6 @@ export class AppComponent {
   customOptions2: OwlOptions = {
     loop: false,
     dots: true,
-    autoplay: true,
     responsive: {
       0: {
         items: 1,
@@ -73,4 +73,5 @@ export class AppComponent {
       },
     },
   };
+  items = [{ title: 'Profile' }, { title: 'Logout' }];
 }

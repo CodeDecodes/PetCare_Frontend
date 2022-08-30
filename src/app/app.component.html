@@ -1,22 +1,40 @@
 <nb-layout>
   <nb-layout-header>
-    <div>
-      <h1>LOGO</h1>
-    </div>
-    <div style="margin-left: 2rem">
-      <button nbButton status="basic" size="small">menu 0</button>
-      <button nbButton class="nav_margin" status="basic" size="small">
-        menu 1
-      </button>
-      <button nbButton status="basic" size="small" class="nav_margin">
-        menu 2
-      </button>
-      <button nbButton status="basic" size="small" class="nav_margin">
-        menu 3
-      </button>
-    </div>
-    <div>
-      <h1>Profile</h1>
+    <div class="row" style="display: contents">
+      <div class="col-4">
+        <h1>LOGO</h1>
+      </div>
+      <div style="margin-left: 2rem" class="col-4">
+        <button nbButton status="basic" size="small">menu 0</button>
+        <button nbButton class="nav_margin" status="basic" size="small">
+          menu 1
+        </button>
+        <button nbButton status="basic" size="small" class="nav_margin">
+          menu 2
+        </button>
+        <button nbButton status="basic" size="small" class="nav_margin">
+          menu 3
+        </button>
+      </div>
+      <div class="col-4" style="float: right">
+        <nb-form-field>
+          <nb-user
+            style="margin-left: 5px"
+            size="small"
+            nbPrefix
+            name="Jonh Doe"
+            title="Engineer"
+            onlyPicture
+          >
+          </nb-user>
+          <nb-select shape="round" size="tiny">
+            <nb-option>Reset</nb-option>
+            <nb-option value="1">Option 1</nb-option>
+            <nb-option value="2">Option 2</nb-option>
+            <nb-option value="3">Option 3</nb-option>
+          </nb-select>
+        </nb-form-field>
+      </div>
     </div>
   </nb-layout-header>
 
@@ -39,8 +57,8 @@
       </owl-carousel-o>
     </div>
     <div class="grid-container">
-      <div class="grid-item">
-        <nb-card size="small">
+      <div class="grid-item" *ngFor="let item of dynamicSlides">
+        <nb-card size="small" class="card-style">
           <div style="display: wrap">
             <owl-carousel-o [options]="customOptions2">
               <ng-container *ngFor="let slide of dynamicSlides">
@@ -70,7 +88,7 @@
           </div>
         </nb-card>
       </div>
-      <div class="grid-item">
+      <!-- <div class="grid-item">
         <nb-card size="small">
           <img
             src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
@@ -81,6 +99,42 @@
           />
           <span>Some text</span></nb-card
         >
+      </div> -->
+      <!-- <div class="grid-item">
+        <nb-card size="small">
+          <img
+            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
+            alt=""
+            height="70%"
+            width="100%"
+            style="border-radius: 20px"
+          />
+          <span>Some text</span></nb-card
+        >
+      </div>
+      <div class="grid-item">
+        <nb-card size="small">
+          <img
+            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
+            alt=""
+            height="70%"
+            width="100%"
+            style="border-radius: 20px"
+          />
+          <span>Some text</span>
+        </nb-card>
+      </div>
+      <div class="grid-item">
+        <nb-card size="small">
+          <img
+            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
+            alt=""
+            height="70%"
+            width="100%"
+            style="border-radius: 20px"
+          />
+          <span>Some text</span>
+        </nb-card>
       </div>
       <div class="grid-item">
         <nb-card size="small">
@@ -129,45 +183,26 @@
           />
           <span>Some text</span></nb-card
         >
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span>
-        </nb-card>
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span>
-        </nb-card>
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span></nb-card
-        >
-      </div>
+      </div> -->
+    </div>
+    <div class="div_class">
+      <button nbButton outline shape="round" style="border: 1px solid black">
+        Show Map
+      </button>
     </div>
   </nb-layout-column>
 
-  <nb-layout-footer>Contact us</nb-layout-footer>
+  <nb-layout-footer>
+    <div style="float: left" class="col-6">
+      <a href="">Privacy</a>
+      <a style="margin-left: 10px" href="">Terms</a>
+      <a style="margin-left: 10px" href="">Details</a>
+      <a style="margin-left: 10px" href="">Map</a>
+      <a style="margin-left: 10px" href="">Contact</a>
+    </div>
+    <div style="float: right" class="col-6">
+      <a style="margin-left: 10px" href="">Language</a>
+      <a style="margin-left: 10px" href="">Currency</a>
+    </div>
+  </nb-layout-footer>
 </nb-layout>

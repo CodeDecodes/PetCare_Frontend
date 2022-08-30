@@ -27,7 +27,44 @@
 }
 .rating-style {
   float: right;
-  margin-right: 10px;
+  margin-right: 13px;
 
   font-size: 12px;
+}
+::ng-deep nb-layout-footer {
+  display: block;
+  margin-top: auto;
+
+  nav {
+    justify-content: space-between !important;
+    display: flex;
+  }
+}
+a,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: red;
+}
+a:hover {
+  text-decoration: underline;
+  color: red;
+  background-color: transparent;
+}
+.card-style {
+  background-color: transparent;
+  border: none;
+}
+.nav_margin {
+  margin-left: 10px;
+}
+.div_class {
+  text-align: center;
+  z-index: 12;
+  left: 50%;
+  position: fixed;
+  bottom: 15%;
+}
+.btn:hover {
+  background-color: black;
 }
