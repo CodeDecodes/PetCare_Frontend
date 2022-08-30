@@ -1,3 +1,4 @@
+node_modules
 node_modules/@angular-devkit/architect/package.json
 node_modules/@angular-devkit/architect/README.md
 node_modules/@angular-devkit/architect/node_modules/rxjs/Subject.d.ts
