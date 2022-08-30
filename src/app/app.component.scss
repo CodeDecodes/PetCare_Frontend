@@ -1,0 +1,33 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 10px;
+}
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+}
+::ng-deep nb-layout-header {
+  display: block;
+
+  nav {
+    align-items: center;
+    justify-content: space-between !important;
+    display: flex;
+  }
+}
+.details-style {
+  float: left;
+  width: 70%;
+  font-size: small;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rating-style {
+  float: right;
+  margin-right: 10px;
+
+  font-size: 12px;
+}
