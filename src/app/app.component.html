@@ -1,70 +1,62 @@
 <nb-layout>
   <nb-layout-header>
     <div class="row" style="display: contents">
-      <div class="col-4">
+      <div>
         <h1>LOGO</h1>
       </div>
-      <div style="margin-left: 2rem" class="col-4">
-        <button nbButton status="basic" size="small">menu 0</button>
-        <button nbButton class="nav_margin" status="basic" size="small">
+      <div class="nav_menu_styles">
+        <button
+          class="nav_margin"
+          style="border-right: 1px solid bisque"
+          status="basic"
+          size="small"
+        >
           menu 1
         </button>
-        <button nbButton status="basic" size="small" class="nav_margin">
+        <button
+          status="basic"
+          size="small"
+          class="nav_margin"
+          style="border-right: 1px solid greenyellow"
+        >
           menu 2
         </button>
-        <button nbButton status="basic" size="small" class="nav_margin">
-          menu 3
-        </button>
+        <button status="basic" size="small" class="nav_margin">menu 3</button>
       </div>
-      <div class="col-4" style="float: right">
-        <nb-form-field>
+      <div style="margin-left: 20%; display: inline-block">
+        <button class="btn_host">Become a host</button>
+        <nb-icon icon="globe" class="globe_host"></nb-icon>
+      </div>
+
+      <div style="float: right">
+        <div class="dropdown">
           <nb-user
-            style="margin-left: 5px"
             size="small"
-            nbPrefix
             name="Jonh Doe"
             title="Engineer"
-            onlyPicture
+            class="dropbtn"
           >
           </nb-user>
-          <nb-select shape="round" size="tiny">
-            <nb-option>Reset</nb-option>
-            <nb-option value="1">Option 1</nb-option>
-            <nb-option value="2">Option 2</nb-option>
-            <nb-option value="3">Option 3</nb-option>
-          </nb-select>
-        </nb-form-field>
+          <div class="dropdown-content">
+            <a href="#">sample text</a>
+            <a href="#">sample text</a>
+            <a href="#">sample text</a>
+          </div>
+        </div>
       </div>
     </div>
   </nb-layout-header>
 
   <nb-layout-column>
-    <div style="position: center">
-      <owl-carousel-o [options]="customOptions">
-        <ng-container *ngFor="let slide of dynamicSlides">
-          <ng-template carouselSlide id="slide.id">
-            <img
-              [src]="slide.src"
-              [alt]="slide.alt"
-              [title]="slide.title"
-              height="30px"
-              width="10px"
-              style="padding-left: 10px; padding-right: 10px"
-            />
-            <span>{{ slide.title }}</span>
-          </ng-template>
-        </ng-container>
-      </owl-carousel-o>
-    </div>
     <div class="grid-container">
       <div class="grid-item" *ngFor="let item of dynamicSlides">
         <nb-card size="small" class="card-style">
-          <div style="display: wrap">
+          <div>
             <owl-carousel-o [options]="customOptions2">
               <ng-container *ngFor="let slide of dynamicSlides">
                 <ng-template carouselSlide id="slide.id">
                   <img
-                    [src]="slide.src"
+                    [src]="slide.images"
                     [alt]="slide.alt"
                     [title]="slide.title"
                     height="230px"
@@ -88,107 +80,9 @@
           </div>
         </nb-card>
       </div>
-      <!-- <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span></nb-card
-        >
-      </div> -->
-      <!-- <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span></nb-card
-        >
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span>
-        </nb-card>
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span>
-        </nb-card>
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span></nb-card
-        >
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span>
-        </nb-card>
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span>
-        </nb-card>
-      </div>
-      <div class="grid-item">
-        <nb-card size="small">
-          <img
-            src="https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg"
-            alt=""
-            height="70%"
-            width="100%"
-            style="border-radius: 20px"
-          />
-          <span>Some text</span></nb-card
-        >
-      </div> -->
     </div>
     <div class="div_class">
-      <button nbButton outline shape="round" style="border: 1px solid black">
-        Show Map
-      </button>
+      <button class="map_button"><span>Show Map</span></button>
     </div>
   </nb-layout-column>
 
