@@ -1,5 +1,5 @@
 <nb-layout>
-  <nb-layout-header>
+  <nb-layout-header style="border: 1px solid rgba(220, 220, 220, 0.575)">
     <div class="row" style="display: contents">
       <div>
         <h1>LOGO</h1>
@@ -46,8 +46,10 @@
       </div>
     </div>
   </nb-layout-header>
-
-  <nb-layout-column>
+  <nb-layout-column class="col_layout">
+    <div>
+      <app-slider></app-slider>
+    </div>
     <div class="grid-container">
       <div class="grid-item" *ngFor="let item of dynamicSlides">
         <nb-card size="small" class="card-style">

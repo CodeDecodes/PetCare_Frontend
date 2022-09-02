@@ -1,0 +1,109 @@
+<nb-layout-header class="button_layout_col" style="overflow: hidden">
+  <nb-layout-column class="col_layout">
+    <button
+      aria-label="Previous"
+      class="previous-button"
+      (click)="scrollLeft()"
+      data-shared-element-id="previous-button"
+      type="button"
+    >
+      <span class="dir dir-ltr"
+        ><svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          role="presentation"
+          focusable="false"
+          style="
+            display: block;
+            fill: none;
+            height: 12px;
+            width: 12px;
+            stroke: currentcolor;
+            stroke-width: 5.33333;
+            overflow: visible;
+          "
+        >
+          <g fill="none">
+            <path
+              d="m20 28-11.29289322-11.2928932c-.39052429-.3905243-.39052429-1.0236893 0-1.4142136l11.29289322-11.2928932"
+            ></path>
+          </g>
+        </svg>
+      </span>
+    </button>
+  </nb-layout-column>
+  <nb-layout-column class="col_layout option_layout_col">
+    <nb-actions size="medium" #widgetsContent class="middle scrollmenu">
+      <!-- <nb-action icon="search-outline" *ngFor="let item of [].constructor(17); let i = index" >jai</nb-action>
+        </nb-actions> -->
+
+      <nb-action
+        *ngFor="let item of [].constructor(30); let i = index"
+        class="nb-action"
+        id="menubtn{{ i }}"
+        #demo
+        [ngClass]="mouseenter ? 'icon_in' : 'icon_out'"
+        (mouseleave)="mouseLeave(false, $event.target)"
+        (mouseenter)="mouseEnter(true, $event.target)"
+      >
+        <button
+          aria-hidden="false"
+          class="menu-btn icon_out"
+          role="radio"
+          aria-checked="false"
+          type="button"
+        >
+          <div class="">
+            <span
+              ><img
+                src="https://a0.muscache.com/pictures/a4634ca6-1407-4864-ab97-6e141967d782.jpg"
+                alt=""
+                width="24"
+                height="24"
+              />
+              <div>
+                <span>Lake</span>
+              </div></span
+            >
+          </div>
+        </button>
+      </nb-action>
+    </nb-actions>
+    <!-- <button *ngFor="let item of [].constructor(100); let i = index">{{i}}</button> -->
+  </nb-layout-column>
+  <nb-layout-column class="col_layout">
+    <button
+      aria-label="Next"
+      class="next-button"
+      (click)="scrollRight()"
+      data-shared-element-id="next-button"
+      type="button"
+    >
+      <span class="dir dir-ltr"
+        ><svg
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          role="presentation"
+          focusable="false"
+          style="
+            display: block;
+            fill: none;
+            height: 12px;
+            width: 12px;
+            stroke: currentcolor;
+            stroke-width: 5.33333;
+            overflow: visible;
+          "
+        >
+          <g fill="none">
+            <path
+              d="m12 4 11.2928932 11.2928932c.3905243.3905243.3905243 1.0236893 0 1.4142136l-11.2928932 11.2928932"
+            ></path>
+          </g>
+        </svg>
+      </span>
+    </button>
+  </nb-layout-column>
+</nb-layout-header>

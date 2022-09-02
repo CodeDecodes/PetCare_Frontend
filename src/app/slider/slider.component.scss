@@ -1,0 +1,89 @@
+.right-header {
+  left: auto !important;
+}
+
+.logo {
+  font-size: 1.275rem;
+  color: #000;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.nb-action {
+  padding: 21px;
+}
+
+.info-widget {
+  width: 31.75%;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.middle {
+  float: left;
+  width: 90%;
+  overflow: auto;
+  /*will change this to hidden later to deny scolling to user*/
+  white-space: nowrap;
+}
+nb-actions.scrollmenu {
+  overflow-x: hidden;
+  height: 4rem;
+  white-space: nowrap;
+  width: 92vw;
+  display: -webkit-box !important;
+  -webkit-box-pack: center;
+}
+
+nb-actions.scrollmenu nb-action {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+
+  text-decoration: none;
+}
+
+nb-actions.scrollmenu nb-action:hover {
+  background-color: #777;
+  display: none;
+}
+
+.menu-btn {
+  margin-top: -1rem;
+  background-color: transparent;
+  border: red;
+}
+
+.previous-button {
+  border-radius: 50%;
+  height: 1.5rem;
+}
+
+.next-button {
+  border-radius: 50%;
+  height: 1.5rem;
+}
+.col_layout {
+  padding: 0rem 0rem 0rem !important;
+  flex: auto !important;
+}
+.option_layout_col {
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.button_layout_col {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.icon_in {
+  opacity: 1 !important;
+  cursor: pointer;
+  color: black;
+  background-color: black;
+}
+.icon_out {
+  opacity: 0.5 !important;
+  cursor: pointer;
+}
