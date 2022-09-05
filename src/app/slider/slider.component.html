@@ -43,13 +43,12 @@
         class="nb-action"
         id="menubtn{{ i }}"
         #demo
-        [ngClass]="mouseenter ? 'icon_in' : 'icon_out'"
         (mouseleave)="mouseLeave(false, $event.target)"
         (mouseenter)="mouseEnter(true, $event.target)"
       >
         <button
           aria-hidden="false"
-          class="menu-btn icon_out"
+          class="menu-btn"
           role="radio"
           aria-checked="false"
           type="button"

@@ -34,16 +34,16 @@ export class SliderComponent implements OnInit {
     // this.ele = <HTMLScriptElement>document.getElementById(this.ele);
     // this.ele.className = 'icon_in';
     // console.log('mouse id : ' + this.ele.className);
-    this.mouseenter = value;
-    return true;
+    // this.mouseenter = value;
+    // return true;
   }
   mouseLeave(value: boolean, event: any) {
-    console.log('mouse exit : ' + value);
+    // console.log('mouse exit : ' + value);
     // this.ele = event.id;
     // this.ele = <HTMLScriptElement>document.getElementById(this.ele);
     // this.ele.classList.remove('icon_in');
     // console.log('mouse id : ' + this.ele.className);
-    this.mouseenter = value;
+    // this.mouseenter = value;
   }
   ngOnInit(): void {}
 }
