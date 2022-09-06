@@ -5,6 +5,7 @@ import {
   NbActionsModule,
   NbButtonModule,
   NbCardModule,
+  NbDialogModule,
   NbFormFieldModule,
   NbIconModule,
   NbLayoutModule,
@@ -19,9 +20,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SliderComponent } from './slider/slider.component';
+import { LoginsignupComponent } from './loginsignup/loginsignup.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
-  declarations: [AppComponent, SliderComponent],
+  declarations: [
+    AppComponent,
+    SliderComponent,
+    LoginsignupComponent,
+    InfoComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule,
@@ -30,6 +38,7 @@ import { SliderComponent } from './slider/slider.component';
     NbLayoutModule,
     NbButtonModule,
     NbCardModule,
+    NbDialogModule.forRoot(),
     NbUserModule,
     NbIconModule,
     NbFormFieldModule,

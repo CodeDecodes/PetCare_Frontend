@@ -1,0 +1,41 @@
+<nb-layout-column class="col_layout">
+  <div>
+    <app-slider></app-slider>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let item of dynamicSlides">
+      <nb-card size="small" class="card-style">
+        <div>
+          <owl-carousel-o [options]="customOptions2">
+            <ng-container *ngFor="let slide of item.images">
+              <ng-template carouselSlide id="slide.id">
+                <img
+                  [src]="slide"
+                  [alt]="item.alt"
+                  [title]="item.id"
+                  height="230px"
+                  width="100%"
+                  style="border-radius: 20px"
+                />
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+        </div>
+        <div class="row">
+          <div class="col details-style">
+            <div>Home Name</div>
+            <div>Distance</div>
+            <div>Charges</div>
+          </div>
+          <div class="col-4 rating-style">
+            <nb-icon icon="star"></nb-icon>
+            Ratings
+          </div>
+        </div>
+      </nb-card>
+    </div>
+  </div>
+  <div class="div_class">
+    <button class="map_button"><span>Show Map</span></button>
+  </div>
+</nb-layout-column>
