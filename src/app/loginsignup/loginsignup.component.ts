@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { COUNTRY_CODES } from '../constants';
 
 @Component({
   selector: 'app-loginsignup',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginsignupComponent implements OnInit {
   constructor() {}
-
+  country: any = {};
   ngOnInit(): void {
-    console.log;
+    this.country = COUNTRY_CODES;
   }
 }
