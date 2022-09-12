@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { COUNTRY_CODES } from '../constants';
 
 @Component({
@@ -7,9 +7,13 @@ import { COUNTRY_CODES } from '../constants';
   styleUrls: ['./loginsignup.component.scss'],
 })
 export class LoginsignupComponent implements OnInit {
+  @Output() closePopUp: EventEmitter<boolean> = new EventEmitter();
   constructor() {}
   country: any = {};
   ngOnInit(): void {
     this.country = COUNTRY_CODES;
+  }
+  work() {
+    this.closePopUp.emit(false);
   }
 }

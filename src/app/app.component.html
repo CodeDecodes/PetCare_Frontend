@@ -38,7 +38,7 @@
           >
           </nb-user>
           <div class="dropdown-content">
-            <a routerLink="loginsignup">Log In</a>
+            <a (click)="isOn = true">Log In</a>
             <a href="#">sample text</a>
             <a href="#">sample text</a>
           </div>
@@ -47,6 +47,10 @@
     </div>
   </nb-layout-header>
   <nb-layout-column class="col_layout">
+    <app-loginsignup
+      *ngIf="isOn"
+      (closePopUp)="ClosePopUP($event)"
+    ></app-loginsignup>
     <router-outlet></router-outlet>
   </nb-layout-column>
   <nb-layout-footer>

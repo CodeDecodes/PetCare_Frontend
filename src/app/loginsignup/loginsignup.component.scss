@@ -10,23 +10,21 @@ input[type="password"] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
 }
 
 /* Add a background color when the inputs get focus */
 input[type="text"]:focus,
 input[type="password"]:focus {
-  background-color: #ddd;
   outline: none;
 }
 
 /* Set a style for all buttons */
-button {
-  background-color: #04aa6d;
-  color: white;
+.button {
+  background-color: transparent;
+  color: black;
   padding: 14px 20px;
   margin: 8px 0;
-
+  box-shadow: 0 5px #999;
   border: none;
   border-radius: 15px;
   cursor: pointer;
@@ -34,8 +32,24 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
-  opacity: 1;
+.button:hover {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #21aa26;
+  animation: mymove 5s;
+}
+
+@keyframes mymove {
+  20% {
+    border-radius: 50px;
+    background-color: #21aa26;
+  }
+}
+.button:active {
+  background-color: #21aa26;
+  box-shadow: 0 5px #666;
+  border-radius: 20px;
+  transform: translateY(4px);
 }
 
 /* Extra styles for the cancel button */
@@ -43,9 +57,26 @@ button:hover {
   padding: 14px 20px;
   border: #f44336;
   border-radius: 15px;
-  background-color: #f44336;
+  background-color: transparent;
 }
-
+.cancelbtn:hover {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #f44336;
+  animation: mymove2 5s;
+}
+@keyframes mymove2 {
+  20% {
+    border-radius: 50px;
+    background-color: #f44336;
+  }
+}
+.cancelbtn:active {
+  background-color: #f44336;
+  box-shadow: 0 5px #666;
+  border-radius: 20px;
+  transform: translateY(4px);
+}
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn {
   float: left;
@@ -54,8 +85,8 @@ button:hover {
 }
 .signupbtn {
   float: right;
-  width: 30%;
-  margin-right: 10px;
+  width: 100%;
+  margin-left: 10px;
 }
 /* Add padding to container elements */
 .container {
@@ -64,12 +95,12 @@ button:hover {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
+  display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 4; /* Sit on top */
   bottom: 1;
   width: 70%; /* Full width */
-  height: 70%; /* Full height */
+  height: 80%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: transparent;
 }
@@ -81,18 +112,20 @@ button:hover {
   /* Stay in place */
   z-index: 1;
   margin-right: 3px;
+  margin-top: 10px;
   /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   border-radius: 20px;
   height: auto;
   float: right;
+
   width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* Style the horizontal ruler */
 hr {
   border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* The Close Button (x) */
@@ -124,4 +157,54 @@ hr {
   .signupbtn {
     width: 100%;
   }
+}
+.line {
+  overflow: hidden;
+  text-align: center;
+  font-size: 12px;
+}
+.line:before,
+.line:after {
+  background-color: rgba(220, 220, 220, 0.575);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.line:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.line:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+.facebook_btn {
+  width: 100%;
+  margin-top: 10px;
+}
+.facebook_btn:hover {
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: #4267b2 !important;
+}
+.google_btn {
+  width: 100%;
+  margin-top: 10px;
+}
+.google_btn:hover {
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: #4285f4 !important;
+}
+.email_btn {
+  width: 100%;
+  margin-top: 10px;
+}
+.email_btn:hover {
+  border-radius: 20px;
+  border: 1px solid white;
+  background-color: #ea4335 !important;
 }
