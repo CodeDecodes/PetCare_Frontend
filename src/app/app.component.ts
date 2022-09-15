@@ -11,6 +11,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class AppComponent {
   constructor(private router: Router, private dialogService: NbDialogService) {}
   isOn: boolean = false;
+  menu1: boolean = false;
   items = [{ title: 'Profile' }, { title: 'Logout' }];
   ngOnIt() {
     this.router.navigate(['home']);
@@ -22,5 +23,12 @@ export class AppComponent {
   }
   ClosePopUP(Switch: boolean) {
     this.isOn = Switch;
+  }
+  ToggleMenu() {
+    if (this.menu1) {
+      this.menu1 = false;
+    } else {
+      this.menu1 = true;
+    }
   }
 }

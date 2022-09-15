@@ -22,6 +22,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SliderComponent } from './slider/slider.component';
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { InfoComponent } from './info/info.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { InfoComponent } from './info/info.component';
     SliderComponent,
     LoginsignupComponent,
     InfoComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@
           style="border-right: 1px solid bisque"
           status="basic"
           size="small"
+          (click)="ToggleMenu()"
         >
           menu 1
         </button>
@@ -47,6 +48,9 @@
     </div>
   </nb-layout-header>
   <nb-layout-column class="col_layout">
+    <div class="menu" [ngClass]="{ 'ng-hide': !menu1 }">
+      <app-details *ngIf="menu1"></app-details>
+    </div>
     <app-loginsignup
       *ngIf="isOn"
       (closePopUp)="ClosePopUP($event)"

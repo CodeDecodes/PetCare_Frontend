@@ -1,0 +1,5 @@
+<h1>
+  Hide the DIV: <input type="checkbox" ng-model="myCheck" (click)="value()" />
+</h1>
+
+<div class="transition" [ngClass]="{ 'ng-hide': myCheck }"></div>
